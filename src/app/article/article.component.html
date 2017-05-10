@@ -1,0 +1,14 @@
+<div class="col-md-12 alert-info">
+	<div class="col-md-5 text-center">
+		<h1 class="value">{{ article.points }}</h1>
+		<h2 class="text">Points</h2>
+	</div>
+	<div class="col-md-7">
+		<h2 class="title"><a href="{{ article.link }}">{{ article.title }}</a></h2>
+		<h6 class="link">({{ article.link }})</h6>
+		<div class="vote">
+			<a style="cursor: pointer;" class="upvote" (click)="upvote()"><span class="glyphicon glyphicon-upload"></span> Upvote</a>
+			<a style="cursor: pointer;" class="downvote" (click)="downvote()"><span class="glyphicon glyphicon-upload"></span> Downvote</a>
+		</div>
+	</div>
+</div>

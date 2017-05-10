@@ -1,13 +1,26 @@
+<!-- Form to take article title and link from user -->
 <form class="ui form-large">
 	<h3 class="title">Add a link</h3>
 
 	<div class="form-group">
 		<label for="title">Title</label>
-		<input type="text" class="form-control" name="title">
+		<input type="text" class="form-control" name="title" #newTitle>
 	</div>
 
 	<div class="form-group">
 		<label for="link">Link</label>
-		<input type="text" class="form-control" name="link">
+		<input type="text" class="form-control" name="link" #newLink>
+	</div>
+
+	<div class="form-group">
+		<button class="btn btn-primary" (click)="addArticle(newTitle,newLink)">Add Article</button>
 	</div>
 </form>
+
+
+<!-- Show the article here -->
+<div class="row articles">
+	<div class="container">
+		<app-article></app-article>
+	</div>
+</div>

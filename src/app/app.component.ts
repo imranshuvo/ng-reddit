@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Article } from './article/article.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  constructor(){
+  
+  }
+
+
+  addArticle(title: HTMLInputElement,link: HTMLInputElement ): boolean {
+  	console.log(`Adding article title: ${title.value} and link: ${link.value}`);
+
+  	return false;
+  }
 }
